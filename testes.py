@@ -1,9 +1,9 @@
 # Arquivo de testes
-
+import numpy as np
 import RobPy as rp
 
-a = rp.cria_vetor3([1, 2, 3])
-b = rp.cria_vetor3([4, 5, 6])
+ang = 30.5*np.pi/180
 
-print(rp.produto_escalar(a, b))
-print(rp.norma_vetor(a))
+m = rp.matriz_rotacao_x(ang)
+
+print(np.linalg.det(m))
